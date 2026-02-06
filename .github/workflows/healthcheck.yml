@@ -18,10 +18,10 @@ jobs:
           version: latest # use latest version of docker compose
 
       - name: Build Docker Compose
-        run: docker-compose build
+        run: docker compose build
 
       - name: Start Docker Compose services
-        run: docker-compose up -d
+        run: docker compose up -d
 
       - name: Check service health
         uses: jaracogmbh/docker-compose-health-check-action@v1.0.0
