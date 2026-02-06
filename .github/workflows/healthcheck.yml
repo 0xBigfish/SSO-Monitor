@@ -1,6 +1,8 @@
 name: Docker Healthcheck
 on:
-  push:
+  pull_request:
+    branches:
+    - main
   schedule:
     - cron: "0 3 * * 1" # run every monday at 03:00 AM
 jobs:
