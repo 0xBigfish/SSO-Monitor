@@ -26,7 +26,7 @@ jobs:
       - name: Check service health
         uses: jaracogmbh/docker-compose-health-check-action@v1.0.0
         with:
-          max-retries: 30
+          max-retries: 12
           retry-interval: 10
           compose-file: "docker-compose.yml"
           skip-exited: "false"  # unhealthy containers might exit and restart
