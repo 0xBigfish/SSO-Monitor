@@ -29,5 +29,5 @@ jobs:
           max-retries: 30
           retry-interval: 10
           compose-file: "docker-compose.yml"
-          skip-exited: "true"
+          skip-exited: "false"  # unhealthy containers might exit and restart
           skip-no-healthcheck: "true"
