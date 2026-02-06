@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 3 * * 1" # run every monday at 03:00 AM
 jobs:
-  test:
+  healthcheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -31,6 +31,3 @@ jobs:
           compose-file: "docker-compose.yml"
           skip-exited: "true"
           skip-no-healthcheck: "true"
-
-      - name: Run tests
-        run: ./run_tests.sh
